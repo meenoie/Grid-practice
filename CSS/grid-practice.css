@@ -1,0 +1,78 @@
+body > div + div {
+  margin-top: 30px;
+}
+/* grid-column-start/end | grid-row-start/end 쓰기 */
+
+div.a-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 2fr 1fr 2fr;
+  width: 500px;
+  height: 500px;
+  gap: 10px;
+}
+.a {
+  background-color: royalblue;
+  grid-area: 1/1/2/3;
+}
+.b {
+  background-color: gold;
+  grid-area: 1/3/3/4;
+}
+.c {
+  background-color: orange;
+  grid-area: 2/2/3/3;
+}
+.d {
+  background-color: violet;
+  grid-area: 2/1/3/2;
+}
+.e {
+  background-color: salmon;
+  grid-area: 3/1/4/2;
+}
+.f {
+  background-color: seagreen;
+  grid-area: 3/2/4/4;
+}
+
+/* grid-column | grid-row span */
+div.b-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 2fr 1fr 2fr;
+  width: 500px;
+  height: 500px;
+  gap: 10px;
+}
+.g {
+  background-color: royalblue;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+}
+.h {
+  background-color: gold;
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+}
+.i {
+  background-color: orange;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+.j {
+  background-color: violet;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+.k {
+  background-color: salmon;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+.l {
+  background-color: seagreen;
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+}
+/* grid-template-areas 쓰기 */
