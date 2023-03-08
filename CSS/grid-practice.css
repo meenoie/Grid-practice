@@ -1,8 +1,8 @@
 body > div + div {
   margin-top: 30px;
 }
-/* grid-column-start/end | grid-row-start/end 쓰기 */
 
+/* grid-column-start/end | grid-row-start/end 쓰기 */
 div.a-container {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
@@ -75,4 +75,41 @@ div.b-container {
   grid-column: 2 / span 2;
   grid-row: 3 / span 1;
 }
+
 /* grid-template-areas 쓰기 */
+div.c-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 2fr 1fr 2fr;
+  width: 500px;
+  height: 500px;
+  gap: 10px;
+  grid-template-areas:
+    "royalblue royalblue gold"
+    "violet orange gold"
+    "salmon seagreen seagreen";
+}
+.m {
+  background-color: royalblue;
+  grid-area: royalblue;
+}
+.n {
+  background-color: gold;
+  grid-area: gold;
+}
+.o {
+  background-color: violet;
+  grid-area: violet;
+}
+.p {
+  background-color: orange;
+  grid-area: orange;
+}
+.q {
+  background-color: salmon;
+  grid-area: salmon;
+}
+.r {
+  background-color: seagreen;
+  grid-area: seagreen;
+}
